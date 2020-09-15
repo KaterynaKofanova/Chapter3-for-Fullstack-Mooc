@@ -134,7 +134,7 @@ app.post('/api/persons', (request, response) => {
         response.json(savedPerson)
       })
       .catch(error => {
-        response.status(400).send({error:'name must be unique'})
+        response.status(400).send({error:error.message})
       })
 })
 
